@@ -118,9 +118,46 @@ console.log(todoJSON);*/
 // ======loops=====
 // for loop
 
-for (let i = 0; i <= 10; i++) {
+/*for (let i = 0; i <= 10; i++) {
     console.log(`for loop counter: ${i}`);
 
 }
 
-// while loop 
+// while loop
+let i = 0;
+while (i < 10) {
+    i++;
+    console.log(`while counter ${i}`);
+}*/
+
+//looping in arrays
+/*for (let i = 0; i < todos.length; i++) {
+    console.log(todos[i].text);
+}
+
+// much better way to write for loop for arrays - more readable
+console.log('better way');
+for (let todo of todos) {
+    console.log(todo.text)
+}*/
+
+// high order array methods - forEach loop each, map create new array, filter based on condition 
+
+todos.forEach(function (todo) {
+    console.log(todo.id, todo.text);
+});
+
+//map return a new array by looping
+const todoText = todos.map(function (todo) {
+    return todo.text;
+});
+
+console.log(todoText);
+
+// filter, ex. array all items true/false
+
+const todoCompleted = todos.filter(function (todo) {
+    return todo.isCompleted === true;
+});
+
+console.log(todoCompleted)
