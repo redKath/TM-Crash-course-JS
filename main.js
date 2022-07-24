@@ -51,3 +51,59 @@ let color = COLOR_ORANGE;
 // most importantly, when naming variables use meaningful names
 // describe the data it stores
 // ex. userName, shoppingCart .. dont use a, b, c, data, value
+
+// =============== JS Functions ===============
+// function declaration 
+function showMessage() {
+    console.log('hellow rolds');
+}
+
+showMessage(); // function calls
+
+// local variables - variables declared inside a function
+
+function showAnotherMessage() {
+    let sampleMessage = 'ayo gg';
+    console.log(sampleMessage);
+}
+
+showAnotherMessage(); // ayo gg
+
+// outer variables can be used by functions
+
+let person = 'Lee Ji Eun';
+
+function bestGirl() {
+    person = 'IU';
+    console.log(`Best girl is ${person}`);
+
+}
+console.log(person); // lee ji eun
+
+bestGirl(); // iu
+
+console.log(person); // iu
+
+//what happens when you use declare the outer variable inside of the function again
+
+function bestIdol() {
+    let person = 'Lee Jidong';
+    console.log(`The Best Idol is ${person}`);
+}
+bestIdol(); // lee jidong
+console.log(person); // iu - its a global var so it wasn't overrode by the function
+
+// about parameters
+function myOTP(pair1, pair2) {
+    console.log(`My fave OTP is: ${pair1} and ${pair2}.`);
+}
+
+myOTP('Kyungsoo', 'Jongin'); // My fave OTP is: Kyungsoo and Jongin.
+
+// using return statements
+
+function myOgOTP(otp1, otp2) {
+    return `My OG OTP is: ${otp1} and ${otp2}.`
+}
+
+console.log(myOgOTP('sehun', 'chanyeol'))
