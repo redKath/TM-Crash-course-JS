@@ -1,45 +1,37 @@
-// arrow f(x) better than expressions 
-// ex: let func = (arg1, arg2, ..., argN) => expression;
+// loops- we used it to repeat a series of statements 
+// each repition is an iteration
 
-let sum = (a, b) => a + b;
+// difference of while loop vs for loop
+// while loop runs while condition is true
+// in for loop you can manipulate what to happen before and after each loop
 
-/* This arrow function is a shorter form of:
+// in while loop, it sometimes becomes an infinite loop 
+// we need to avoid it by updating the counter variable often named 'i'
 
-let sum = function(a, b) {
-  return a + b;
-};
-*/
+// when to use for and while loop
+// use for loop if you know in advance how many times you want the loop to run
 
-console.log(sum(1, 2)); // 3
+// example of while loop
 
-// for single parameters
-let double = n => n * 2;
-// roughly the same as: let double = function(n) { return n * 2 }
+console.log(`While loop example`);
+let number = 1;
+while (number <= 5) {
+    console.log(number);
+    number++;
+}
+// example of FOR loop
+console.log(`FOR LOOP EXAMPLE`)
+let numberS;
+for (numberS = 1; numberS <= 5; numberS++) {
+    console.log(numberS);
+}
 
-console.log(double(3)); // 6
+// here's an example where while loop is better to use than for
+let letter = "";
+while (letter !== "X") {
+    letter = prompt("Type a letter or X to exit:");
+}
 
-// if no arguments add ()
-let sayHi = () => console.log("Hello!");
+// You can't know how many times it'll take for the user to enter X,
+//so while is generally good for loops that depend on user interaction.
 
-sayHi();
-
-// arrow f(x) can be used in the same way as expressions
-/*let age = prompt("What is your age?", 18);
-
-let welcome = (age < 18) ?
-    () => console.log('Hello!') :
-    () => console.log("Greetings!");
-
-welcome();*/
-
-// multiline arrow f(x)
-let sumOf2 = (a, b) => {  // the curly brace opens a multiline function
-    let result = a + b;
-    return result; // if we use curly braces, then we need an explicit "return"
-};
-
-console.log(sumOf2(6, 2)); // 8
-
-// summary: arrow f(x) are best for one-liner f(x)
-// we can use it without curly braces
-//if we use with curly braces we need a explicit return statement
