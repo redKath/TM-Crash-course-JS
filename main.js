@@ -1,47 +1,45 @@
-// all about expressions
-// f(x) declaration example
-function sayHi() {
-    console.log("Hello");
-}
+// arrow f(x) better than expressions 
+// ex: let func = (arg1, arg2, ..., argN) => expression;
 
-// expression is another way to write function
-let sayAnnyeong = function () {
-    console.log("Annyeong");
+let sum = (a, b) => a + b;
+
+/* This arrow function is a shorter form of:
+
+let sum = function(a, b) {
+  return a + b;
+};
+*/
+
+console.log(sum(1, 2)); // 3
+
+// for single parameters
+let double = n => n * 2;
+// roughly the same as: let double = function(n) { return n * 2 }
+
+console.log(double(3)); // 6
+
+// if no arguments add ()
+let sayHi = () => console.log("Hello!");
+
+sayHi();
+
+// arrow f(x) can be used in the same way as expressions
+/*let age = prompt("What is your age?", 18);
+
+let welcome = (age < 18) ?
+    () => console.log('Hello!') :
+    () => console.log("Greetings!");
+
+welcome();*/
+
+// multiline arrow f(x)
+let sumOf2 = (a, b) => {  // the curly brace opens a multiline function
+    let result = a + b;
+    return result; // if we use curly braces, then we need an explicit "return"
 };
 
-sayHi(); // Hello
-sayAnnyeong(); // Annyeong
+console.log(sumOf2(6, 2)); // 8
 
-// a f(x) is a value
-console.log(sayAnnyeong); // shows f(x) code - this does not call f(x) since there are no parenthesis
-
-// see differences
-// Function Declaration
-function sum(a, b) {
-    return a + b;
-}
-
-// Function Expression
-let sumx = function (a, b) {
-    return a + b;
-};
-
-// another difference f(x) declaration can be called before it's created while expression is not
-sayHi("John"); // Hello, John
-
-function sayHi(name) {
-    console.log(`Hello, ${name}`); //works
-}
-
-sayHello("John"); // error! cannot access before initialization
-
-let sayHello = function (name) {  // (*) no magic any more
-    console.log(`Hello, ${name}`);
-};
-
-// when to use function declaration and function expression
-// f(x) declaration is easier to read, more eye-catching
-// can be used even before they are declared
-
-// f(x) expressions are used instead if a Function Declaration does not suit us for some reason
-// ex: we need a conditional declaration
+// summary: arrow f(x) are best for one-liner f(x)
+// we can use it without curly braces
+//if we use with curly braces we need a explicit return statement
