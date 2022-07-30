@@ -1,29 +1,16 @@
-// Check the following program that shows even numbers (divisible by 2) between 1 and 10.
+// Input validation
 
-// for (let i = 1; i <= 10; i++) {
-//   if (i % 2 === 0) {
-//     console.log(`${i} is even`);
-//   }
+// Write a program that continues to ask the user for a number until the entered number is less than or equal to 100.
+console.log("=========")
+// let num = prompt("Enter number");
+// while (num >100) {
+//   num = prompt("Enter number")
+//   console.log(num)
 // }
-
-// Improve the program so that it also shows odd numbers. Improve it again to replace the initial number 1 by a number given by the user.
-
-// shows odd numbers
-for (let i = 1; i <= 10; i++) {
-    if (i % 2 === 0) {
-      console.log(`${i} is even`);
-    } else {
-      console.log(`${i}`)
-    }
-    
-  }
-  console.log("====ashdjshda====")
-  let userInit = prompt("Enter a number: ")
-  for (let i = userInit; i <= 10; i++) {
-    if (i % 2 === 0) {
-      console.log(`${i} is even`);
-    } else {
-      console.log(`${i}`)
-    }
-    
-  }
+// When you are done with the above, improve the program so that the terminating number is between 50 and 100.
+let num = prompt("Enter a number");
+while ((num <= 50) || (num >= 100)) {
+  num = prompt("Enter number")
+  console.log(num)
+}
+console.log("end")
