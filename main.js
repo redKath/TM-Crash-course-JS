@@ -1,5 +1,3 @@
-// multiplication table
-//  Write a program that asks the user for a number, then shows the multiplication table for this number.
+// Neither yes nor no
 
-const number = prompt("Give a number: ");
-
+// Write a program that plays "neither yes, nor no" with the user. Specifically, the programs asks the user to enter text until either "yes" or "no" is typed, which ends the game.
