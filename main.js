@@ -1,26 +1,25 @@
-// FizzBuzz
+// javascript.info task answers:
+// working with variables
+// Declare two variables: admin and name.
+// Assign the value "John" to name.
+// Copy the value from name to admin.
+// Show the value of admin using alert (must output “John”).
 
-// Write a program that shows all numbers between 1 and 100 with the following exceptions:
+let admin;
+let name = 'John';
+admin = name;
+console.log(admin) // John
 
-//     It shows "Fizz" instead if the number is divisible by 3.
+/*Create a variable with the name of our planet. How would you name such a variable?
+Create a variable to store the name of a current visitor to a website. How would you name that variable?*/
+let ourPlanetName = 'earth';
+let currentUserName = 'John';
 
-//     It shows "Buzz" instead if the number is divisible by 5 and not by 3.
+const BIRTHDAY = '18.04.1982';
 
-// When it's done, improve it so that the program shows "FizzBuzz" instead for numbers divisible both by 3 and by 5.
-let number = prompt('Enter a number between 1-100');
-while ((number > 0) && (number < 101)) {
-    if ((number % 5 === 0) && (number % 3 === 0)) {
-        console.log(`FizzBuzz : ${number} `)
-        number = 0
-    } else if ((number % 5 === 0) && (number % 3 !== 0)) {
-        console.log(`Buzz : ${number} `)
-        number = 0
-    } else if ((number % 3 === 0)) {
-        console.log(`Fizz : ${number} `)
-        number = 0
-    } else {
-        console.log(`${number}`)
-        number = 0
-    }
+const age = someCode(birthday);
+
+function someCode(birthday) {
+    // somecode
 }
-console.log(`stopped : ${number}`)
+
